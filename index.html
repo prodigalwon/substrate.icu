@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>substrate.icu — Your name on the blockchain</title>
-  <meta name="description" content="PNS2 gives your wallet a real name — and a real web address. Built on Polkadot." />
+  <title>substrate.icu Your name on the blockchain</title>
+  <meta name="description" content="PNS2 gives your wallet a real name and a real web address. Built on Polkadot." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    /* Strip Bootstrap font overrides — our fonts take over */
+    /* Strip Bootstrap font overrides our fonts take over */
     *, *::before, *::after { font-family: inherit; }
   </style>
   <style>
@@ -191,6 +191,13 @@
       transition: background .14s;
     }
     .search-btn:hover { background: var(--red-hi); }
+    @media (max-width: 480px) {
+      .search-bar { padding: 5px 5px 5px 12px; gap: 4px; }
+      .search-bar input { font-size: 14px; }
+      .network-fixed { font-size: 11px; }
+      .search-divider { display: none; }
+      .search-btn { padding: 9px 14px; font-size: 13px; border-radius: 8px; }
+    }
     .testnet-notice {
       font-size: 12px;
       font-weight: 500;
@@ -568,7 +575,7 @@
           Polkadot Name Service 2
         </div>
         <h1>Your name.<br>On the chain.<br><em>In any browser.</em></h1>
-        <p class="hero-sub">alice.substrate.icu isn't just a wallet address — it's a real web address. Type it in any browser. It just works.</p>
+        <p class="hero-sub">alice.substrate.icu isn't just a wallet address it's a real web address. Type it in any browser. It just works.</p>
         <div class="search-bar" id="searchBar">
           <input type="text" id="nameInput" placeholder="yourname" spellcheck="false" autocomplete="off" maxlength="63" />
           <div class="search-divider"></div>
@@ -576,7 +583,7 @@
           <button class="search-btn" id="searchBtn">Look up</button>
         </div>
         <div id="searchResult"></div>
-        <p class="testnet-notice">⬡ Live on Paseo testnet — names are free to explore, not yet permanent</p>
+        <p class="testnet-notice">⬡ Live on Paseo testnet names are free to explore, not yet permanent</p>
       </div>
       <div class="col-12 col-lg-6 d-none d-lg-block">
         <div class="hero-card">
@@ -588,7 +595,7 @@
           <div class="card-row"><span class="card-key">Wallet</span><span class="card-val">5GrwvaEF…8W4</span></div>
           <div class="card-row"><span class="card-key">Resolves in browser</span><span class="badge-green">✓ Yes</span></div>
           <div class="card-row"><span class="card-key">Network</span><span class="card-val">Polkadot / Paseo</span></div>
-          <div class="card-row"><span class="card-key">Owned by</span><span class="card-val">alice — NFT</span></div>
+          <div class="card-row"><span class="card-key">Owned by</span><span class="card-val">alice NFT</span></div>
         </div>
       </div>
     </div>
@@ -602,9 +609,9 @@
       <div class="col-12 col-md-10 col-lg-8">
         <div class="section-label">What is PNS2?</div>
         <h2>A name that goes<br><em>everywhere</em> you do.</h2>
-        <p class="section-lead">Your wallet address looks like <code style="font-family:monospace;font-size:.85em;background:var(--bg-2);border:1px solid var(--border);border-radius:4px;padding:2px 7px;color:var(--text);">5GrwvaEF…</code>. Nobody remembers that. PNS2 lets you claim a name — like <strong>alice.substrate.icu</strong> — that points to your wallet and anything else you want to attach to it.</p>
+        <p class="section-lead">Your wallet address looks like <code style="font-family:monospace;font-size:.85em;background:var(--bg-2);border:1px solid var(--border);border-radius:4px;padding:2px 7px;color:var(--text);">5GrwvaEF…</code>. Nobody remembers that. PNS2 lets you claim a name like <strong>alice.substrate.icu</strong> that points to your wallet and anything else you want to attach to it.</p>
         <p class="section-lead">And unlike other naming services, PNS2 names are real DNS. Someone on a regular browser can visit alice.substrate.icu and land on your page. No crypto knowledge required. No extension to install. It just resolves.</p>
-        <p class="section-lead"><strong>substrate.icu is the root.</strong> Every name under it is a PNS2 name — living on-chain, owned by you, resolvable by anyone.</p>
+        <p class="section-lead"><strong>substrate.icu is the root.</strong> Every name under it is a PNS2 name living on-chain, owned by you, resolvable by anyone.</p>
       </div>
     </div>
   </div>
@@ -627,7 +634,7 @@
         <div class="feature-card">
           <span class="feature-icon">🌐</span>
           <h3>Works in any browser</h3>
-          <p>The Snorkel bridges PNS2 names to standard DNS. alice.substrate.icu resolves for anyone, anywhere — no plugins needed.</p>
+          <p>The Snorkel bridges PNS2 names to standard DNS. alice.substrate.icu resolves for anyone, anywhere no plugins needed.</p>
         </div>
       </div>
       <div class="col-12 col-sm-6 col-lg-4">
@@ -641,14 +648,14 @@
         <div class="feature-card">
           <span class="feature-icon">🔑</span>
           <h3>Identity-ready</h3>
-          <p>PNS2 names integrate with ZK-PKI — so your name can carry hardware-verified proof that a real person owns it.</p>
+          <p>PNS2 names integrate with ZK-PKI so your name can carry hardware-verified proof that a real person owns it.</p>
         </div>
       </div>
       <div class="col-12 col-sm-6 col-lg-4">
         <div class="feature-card">
           <span class="feature-icon">⚡</span>
           <h3>Built on Polkadot</h3>
-          <p>Runs on Polkadot's infrastructure — fast, interoperable, connected to every parachain in the ecosystem.</p>
+          <p>Runs on Polkadot's infrastructure fast, interoperable, connected to every parachain in the ecosystem.</p>
         </div>
       </div>
       <div class="col-12 col-sm-6 col-lg-4">
@@ -765,11 +772,11 @@
   function showResult({ name, available, owner, rpcError }) {
     const fullName = `${name}.paseo.substrate.icu`;
     if (rpcError) {
-      result.innerHTML = `<div class="result-card error"><div class="result-top"><div class="result-icon grey">⚠️</div><div><div class="result-name">${name}<span>.paseo.substrate.icu</span></div><div class="result-status">Couldn't reach Paseo — check back in a moment</div></div></div></div>`;
+      result.innerHTML = `<div class="result-card error"><div class="result-top"><div class="result-icon grey">⚠️</div><div><div class="result-name">${name}<span>.paseo.substrate.icu</span></div><div class="result-status">Couldn't reach Paseo check back in a moment</div></div></div></div>`;
       return;
     }
     if (available) {
-      result.innerHTML = `<div class="result-card available"><div class="result-top"><div class="result-icon green">✓</div><div><div class="result-name">${name}<span>.paseo.substrate.icu</span></div><div class="result-status green">Available on Paseo testnet</div></div></div><div class="result-bottom"><span class="testnet-pill">Paseo Testnet</span><a class="beta-btn" href="mailto:apollonius21@proton.me?subject=Beta access — ${fullName}&body=I'd like to register ${fullName} on PNS2.">Join the beta to claim it →</a></div></div>`;
+      result.innerHTML = `<div class="result-card available"><div class="result-top"><div class="result-icon green">✓</div><div><div class="result-name">${name}<span>.paseo.substrate.icu</span></div><div class="result-status green">Available on Paseo testnet</div></div></div><div class="result-bottom"><span class="testnet-pill">Paseo Testnet</span><a class="beta-btn" href="mailto:apollonius21@proton.me?subject=Beta access ${fullName}&body=I'd like to register ${fullName} on PNS2.">Join the beta to claim it →</a></div></div>`;
     } else {
       const ownerStr = owner ? `<div class="result-status red">Registered · ${owner.slice(0,8)}…${owner.slice(-4)}</div>` : `<div class="result-status red">Already registered</div>`;
       result.innerHTML = `<div class="result-card taken"><div class="result-top"><div class="result-icon red">✗</div><div><div class="result-name">${name}<span>.paseo.substrate.icu</span></div>${ownerStr}</div></div><div class="result-bottom"><span class="testnet-pill">Paseo Testnet</span><span style="font-size:12px;color:var(--text-dim);">Try a different name</span></div></div>`;
